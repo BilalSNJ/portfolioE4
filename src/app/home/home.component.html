@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4">
+      <div
+        class="flex flex-col items-center md:flex-row md:items-start py-6 md:py-24"
+      >
+        <img
+          src="assets\icons\github.png"
+          alt="Votre Photo"
+          class="w-32 h-32 md:w-48 md:h-48 rounded-full shadow-lg mb-4 md:mb-0 mr-0 md:mr-6"
+        />
+        <div>
+          <h1 class="text-2xl md:text-4xl font-bold mb-2">Senhaji Bilal</h1>
+          <p class="text-sm md:text-base text-gray-600">
+            Présentation Je suis Bilal SENHAJI, étudiant en deuxieme année de
+            BTS SIO (Services Informatiques aux Organisations), Option SLAM
+            (Solutions Logicielles et Application Métier) l'option spécialisée
+            pour le développement, au CFA INSTA, Paris 75002. J'ai développé une
+            passion pour l'informatique depuis que j'ai commencer mes etude en
+            BTS SIO. C'est ainsi que j'ai decouvert le developpement web et j'ai
+            décider d'en faire mon futur métier. Si vous voulez plus d'infos
+            vous pouvez télécharger mon CV ci-dessous.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="mb-5">
+        <h1 class="flex justify-center text-2xl md:text-4xl font-bold mb-12">
+          Mes compétences développement
+        </h1>
+
+        <div class="flex justify-center flex-wrap gap-4 my-6">
+          <!-- Ajouter ici les logos des technologies avec leur nom en alt -->
+          <img src="assets\icons\html.png" alt="HTML" class="h-24" />
+          <img src="assets\icons\css.webp" alt="css" class="h-24" />
+          <img src="assets\icons\php.png" alt="php" class="h-24" />
+          <img src="assets\icons\ts.webp" alt="ts" class="h-24" />
+          <img src="assets\icons\Angular_full_color_logo.svg.png" alt="ts" class="h-24" />
+
+          <!-- Répétez pour chaque technologie -->
+        </div>
+      </div>
+
+      <div class="flex justify-center flex-wrap gap-4 my-6">
+        <!-- Ajouter ici les logos des outils avec leur nom en alt -->
+        <img src="assets\icons\git.png" alt="GitHub" class="h-24" />
+        <img src="assets\icons\github.png" alt="GitHub" class="h-24" />
+        <img src="assets\icons\VSCODE.png" alt="GitHub" class="h-24" />
+        <!-- Répétez pour chaque outil -->
+      </div>
+
+
+    </div>
+
+
+    <div class="text-center my-8">
+        <a
+          href="assets\icons\Bilal-SENHAJI-CV.pdf"
+          download="Bilal-SENHAJI-CV.pdf"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-4"
+        >
+          Télécharger mon CV
+        </a>
+
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="togglePdfVisibility()">
+        Consulter mon CV
+      </button>
+
+
+      </div>
+
+
+
+      <div *ngIf="showPdf" class="pdf-container flex justify-center">
+        <iframe src="assets\icons\Bilal-SENHAJI-CV.pdf" width="80%" height="900px"></iframe>
+      </div>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<nav class="bg-gray-800 text-white">
+  <!-- Navbar pour les écrans larges (desktop) -->
+  <div class="hidden md:flex justify-between items-center p-4">
+    <a class="text-xl font-semibold" routerLink="/">Accueil</a>
+    <div>
+      <a class="px-4 py-2 hover:bg-gray-700 rounded" routerLink="/entreprise">Entreprise</a>
+      <a class="px-4 py-2 hover:bg-gray-700 rounded" routerLink="/bts-sio">BTS SIO</a>
+      <a class="px-4 py-2 hover:bg-gray-700 rounded" routerLink="/projects">Projets</a>
+      <a class="px-4 py-2 hover:bg-gray-700 rounded" routerLink="/tech-watch">Veille Techno</a>
+      <a class="px-4 py-2 hover:bg-gray-700 rounded" routerLink="/legal-watch">Veille Juridique</a>
+      <a class="px-4 py-2 hover:bg-gray-700 rounded" routerLink="/contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Top Sidebar pour Mobile -->
+  <div class="md:hidden flex justify-between items-center p-4">
+    <a class="text-xl font-semibold" routerLink="/">Mon Portfolio</a>
+    <button (click)="toggleSidebar()" class="p-2 focus:outline-none">
+      <!-- Icône de menu (ex : bars, menu) -->
+      <img class="h-6 w-6" src="assets\icons\sidebar-2.svg" alt="">
+    </button>
+  </div>
+
+  <!-- Contenu du Sidebar -->
+  <div class="md:hidden" [class.hidden]="!isSidebarOpen">
+    <a class="block px-4 py-2 hover:bg-gray-700 rounded" routerLink="/entreprise">Entreprise</a>
+    <a class="block px-4 py-2 hover:bg-gray-700 rounded" routerLink="/bts-sio">BTS SIO</a>
+    <a class="block px-4 py-2 hover:bg-gray-700 rounded" routerLink="/projects">Projets</a>
+    <a class="block px-4 py-2 hover:bg-gray-700 rounded" routerLink="/tech-watch">Veille Techno</a>
+    <a class="block px-4 py-2 hover:bg-gray-700 rounded" routerLink="/legal-watch">Veille Juridique</a>
+    <a class="block px-4 py-2 hover:bg-gray-700 rounded" routerLink="/contact">Contact</a>
+  </div>
+</nav>
